@@ -13,10 +13,7 @@ public class SchoolServiceController {
 	@Autowired
     StudentServiceDelegate studentServiceDelegate;
 
-	@RequestMapping(value = "/getSchoolDetails/{schoolname}", method = RequestMethod.GET)
-	public String getStudents(@PathVariable String schoolname) {
-		System.out.println("Going to call student service to get data!");
-		return studentServiceDelegate.callStudentServiceAndGetData(schoolname);
-	}
-	
+	// endpoint to get students (/getSchoolDetails/{schoolname})
+	// this method must return a student after calling method tagged by hystrix
+
 }

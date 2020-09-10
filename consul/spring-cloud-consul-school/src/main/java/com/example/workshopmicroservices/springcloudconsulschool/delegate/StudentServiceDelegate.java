@@ -10,25 +10,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Service
 public class StudentServiceDelegate {
-	@Autowired
-	RestTemplate restTemplate;
-	
-	public String callStudentServiceAndGetData(String schoolname) {
-		System.out.println("Consul Demo - Getting School details for " + schoolname);
-		String response = restTemplate.exchange("http://student-service/getStudentDetailsForSchool/{schoolname}", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
-		}, schoolname).getBody();
-		
 
-		System.out.println("Response Received as " + response + " -  " + new Date());
-
-		return "School Name -  " + schoolname + " :::  Student Details " + response + " -  " + new Date();
-	}
-	
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+	// get data for student service (call endpoint) retrieve school name + student details + date of transaction
+	// think about load balancer and restTemplate
 }
