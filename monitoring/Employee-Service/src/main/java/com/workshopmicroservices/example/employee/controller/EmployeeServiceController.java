@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 // this class is a REST Controller
+@RestController
 public class EmployeeServiceController {
 	
 	
@@ -20,6 +21,7 @@ public class EmployeeServiceController {
 		private static final long serialVersionUID = -3970206781360313502L;
 
 		// add 2 ou 3 employee
+
 
     };
  
