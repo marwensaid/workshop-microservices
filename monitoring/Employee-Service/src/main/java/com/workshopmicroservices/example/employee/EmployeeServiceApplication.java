@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-
+@EnableEurekaClient
 // how active Eureka ?
 public class EmployeeServiceApplication {
 
