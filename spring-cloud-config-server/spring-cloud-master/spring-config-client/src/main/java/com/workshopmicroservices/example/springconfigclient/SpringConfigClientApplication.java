@@ -1,37 +1,28 @@
 package com.workshopmicroservices.example.springconfigclient;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+//this is a spring boot application
 public class SpringConfigClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringConfigClientApplication.class, args);
 	}
-	
-	@Autowired
-	public void setEnv(Environment e)
-	{
-		System.out.println(e.getProperty("msg"));
-	}
+
+	//here we wanna a setEnv method getting property environment "msg" from conf (think about injection)
 }
 
 // this is a rest controller class with scope
 class MessageRestController {
 
-	// specify msg value (from conf)
-	private String msg;
+	// specify msg value (from conf) and put it into a string
+
 
 	@GetMapping("/msg")
+	// getting from /msg (http)
 	// /msg get endpoint
-	public String getMsg() {
-		return this.msg;
+	public void getMsg() {
+		// just return a msg
 	}
 }
