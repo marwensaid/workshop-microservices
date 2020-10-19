@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 // this class is a REST Controller
-@RestController
-@Log
 public class EmployeeServiceController {
 	
-	
+
 	private static final Map<Integer, Employee> employeeData = new HashMap<Integer, Employee>() {
 		/**
 		 * 
@@ -22,28 +20,17 @@ public class EmployeeServiceController {
 		private static final long serialVersionUID = -3970206781360313502L;
 
 		// add 2 ou 3 employee
-        {
-            put(111,new Employee("Employee1", 1));
-            put(222,new Employee("Employee2", 2));
-        }
 
     };
 
-    @RequestMapping(value = "/findEmployeeDetails/{employeeId}", method = RequestMethod.GET)
     public Employee getEmployeeDetails(@PathVariable int employeeId) {
         System.out.println("Getting Employee details for " + employeeId);
 
         // method to get employee detail by id
 		// this class attack this endpoint /findEmployeeDetails/{employeeId}
 
-        Employee employee = employeeData.get(employeeId);
 
-        if(employee==null){
-            System.Logger.Level.valueOf("error");
-        }
-
-
-        return employee;
+        return null;
     }
 
 }
