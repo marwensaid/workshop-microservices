@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Date;
 
 // Service class
-@Service
 public class StudentServiceDelegate {
 	@Autowired
 	RestTemplate restTemplate;
@@ -22,9 +21,15 @@ public class StudentServiceDelegate {
 
 		return "";
 	}
+
+
+
 	// implement a fallback method
 
-	@Bean
+
+
+
+	// this is a bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
