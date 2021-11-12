@@ -27,8 +27,6 @@
         <module>virtualization/hoverfly-actual-service</module>
         <module>virtualization/hoverfly-actual-service-client</module>
         <module>zipkin/zipkin</module>
-        <module></module>
-        <module></module>
     </modules>
 
     <parent>
