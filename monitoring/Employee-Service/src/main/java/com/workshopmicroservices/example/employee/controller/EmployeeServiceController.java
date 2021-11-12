@@ -15,9 +15,8 @@ public class EmployeeServiceController {
 
     // create employeeData Map : key : integer , value : Employee
 	private static final Map<Integer, Employee> employeeData = new HashMap<Integer, Employee>() {
-		/**
-		 * 
-		 */
+
+
 		private static final long serialVersionUID = -3970206781360313502L;
 
 		// add 2 ou 3 employee
